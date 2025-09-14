@@ -23,6 +23,7 @@ app.use(
       "https://uber-clone-frontend-eta.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
