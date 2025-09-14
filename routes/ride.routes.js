@@ -49,7 +49,6 @@ router.post(
   body("rideId").isMongoId().withMessage("Invalid ride id"),
   rideController.confirmRide
 );
-module.exports = router;
 
 router.get(
   "/start-ride",
@@ -68,3 +67,4 @@ router.post(
   body("rideId").isMongoId().withMessage("Invalid ride id"),
   rideController.endRide
 );
+module.exports = router;

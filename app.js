@@ -17,9 +17,8 @@ app.use(cookieParser());
 
 // Middleware
 app.use(cors());
-app.use(morgan('dev'))
+app.use(morgan("dev"));
 
-app.use(express.json()); // <-- to handle JSON requests
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to DB

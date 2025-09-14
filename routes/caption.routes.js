@@ -57,4 +57,5 @@ router.get(
   authMiddleware.authCaption,
   captionController.getCaptionProfile
 );
+
 module.exports = router;
