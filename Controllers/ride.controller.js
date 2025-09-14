@@ -105,7 +105,7 @@ module.exports.confirmRide = async (req, res) => {
       caption: req.caption,
     });
 
-    console.log("confirmRide called by caption:", req.caption?._id);
+    // console.log("confirmRide called by caption:", req.caption?._id);
 
     sendMessageToSocketId(ride.user.socketId, {
       event: "ride-confirmed",
@@ -134,7 +134,7 @@ module.exports.startRide = async (req, res) => {
       caption: req.caption,
     });
 
-    console.log(ride);
+    // console.log(ride);
 
     sendMessageToSocketId(ride.user.socketId, {
       event: "ride-started",

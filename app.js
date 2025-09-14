@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const morgan = require("morgan");
 dotenv.config();
 
 const express = require("express");
@@ -10,14 +11,13 @@ const cookieParser = require("cookie-parser");
 const mapsRoutes = require("./routes/maps.routes");
 const rideRoutes = require("./routes/ride.routes");
 
-
-
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
 // Middleware
 app.use(cors());
+app.use(morgan('dev'))
 
 app.use(express.json()); // <-- to handle JSON requests
 app.use(express.urlencoded({ extended: true }));
