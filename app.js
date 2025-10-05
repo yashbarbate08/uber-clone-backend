@@ -19,15 +19,16 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://uber-clone-frontend-mnq7hbgth-yash-barbates-projects.vercel.app", // frontend URL
-     
-      "http://localhost:5173", // local dev (optional)
+      "https://uber-clone-frontend-eta.vercel.app", // ✅ new domain
+      "https://uber-clone-frontend-mnq7hbgth-yash-barbates-projects.vercel.app", // old domain (optional)
+      "http://localhost:5173", // for local dev
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
 
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
