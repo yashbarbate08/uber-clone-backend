@@ -15,26 +15,26 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-// Middleware
+// ✅ Correct CORS middleware
 app.use(
   cors({
     origin: [
-     origin: https: uber-clone-frontend-qtlb09iri-yash-barbates-projects.vercel.app/
-    credentials: true,
+      "https://uber-clone-frontend.onrender.com", // frontend URL
+      "http://localhost:5173", // local dev (optional)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
-app.use(morgan("dev"));
 
+app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 
-// Connect to DB
+// ✅ Connect to DB
 connectToDB();
 
-// Routes
+// ✅ Routes
 app.get("/", (req, res) => {
   res.send("Hello Brother");
 });
