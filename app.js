@@ -19,7 +19,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://uber-clone-frontend-i7fudsoue-yash-barbates-projects.vercel.app", // frontend URL
+      " https://uber-clone-frontend-mnq7hbgth-yash-barbates-projects.vercel.app", // frontend URL
+     
       "http://localhost:5173", // local dev (optional)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
