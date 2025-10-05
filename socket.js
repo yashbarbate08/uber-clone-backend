@@ -5,15 +5,17 @@ const captionModel = require("./Models/caption.model");
 let io;
 
 function initializeSocket(server) {
-  io = socketIo(server, {
-    cors: {
-      origin: [
-        "http://localhost:5173",
-        "https://uber-clone-frontend-eta.vercel.app",
-      ],
-      methods: ["GET", "POST"],
-    },
-  });
+  const io = new Server(server, {
+  cors: {
+    origin: [
+      "https://uber-clone-frontend-eta.vercel.app",
+      "https://uber-clone-frontend-mnq7hbgth-yash-barbates-projects.vercel.app",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
 
   io.on("connection", (socket) => {
     console.log(`Client connected: ${socket.id}`);
