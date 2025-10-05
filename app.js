@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-     origin: process.env.VITE_FRONTEND_URL || "http://localhost:5173", // use env variable first
+     origin: https: uber-clone-frontend-qtlb09iri-yash-barbates-projects.vercel.app/
     credentials: true,
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
