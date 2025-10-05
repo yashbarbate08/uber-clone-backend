@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "https://uber-clone-frontend.onrender.com", // frontend URL
+      "https://uber-clone-frontend-eta.vercel.app/", // frontend URL
       "http://localhost:5173", // local dev (optional)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
